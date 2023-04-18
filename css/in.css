@@ -1,0 +1,199 @@
+/* top nav bar ka pada hua hai */
+.topmenu {
+    
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+}
+
+.topmenu a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    float: center;
+    color: rgb(255, 180, 41);
+    padding: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.topmenu a:hover {
+    background-color: #00000023;
+    border-radius: 20px;
+}
+/* yaha hero top page ka pada hua hai */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: rgb(255, 255, 255);
+    background-color: #008512;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+/* card ka kaam  */
+/* .head-product{
+    padding: 20px;
+    text-align: center;
+} */
+h2{
+	text-align: center;
+	margin-bottom: 4rem;
+	font-size: 2rem;
+}
+
+.all-products{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.product{
+	overflow: hidden;
+	background: #ffffff;
+	color: #21201e;
+	text-align: center;
+	width: 240px;
+	height: 300px;
+	/* padding: 0rem; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.2rem;
+	margin: 2rem;
+}
+.product-info{
+}
+.product .product-title, .product .product-price{
+	font-size: 18px;
+}
+
+.product:hover img{
+	/* scale:  1.1; */
+}
+
+.product:hover {
+	box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.product img {
+	height: 9rem;
+	transition: all 0.3s;
+}
+
+.product a:link, .product a:visited{
+	color: #ececec;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #2c3e50;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	/* margin-top: 1rem; */
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.product a:hover{
+	transform: scale(1.1);
+}
+
+
+
+/* footer */
+
+.footer {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    position: static;
+    
+  }
+}
+
+
+
+/* media shuru hai yaha se */
+@media screen and (max-width: 600px) {
+    nav  {
+        display: none;
+        
+    }
+
+    nav  {
+        float: none;
+        
+    }
+
+    nav {
+        display: block;
+        text-align: left;
+    }
+    .product{
+      overflow: hidden;
+      background: #ffffff;
+      color: #21201e;
+      text-align: center;
+      width: 150px;
+      height: 250px;
+      /* padding: 0rem; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      margin: 5px;
+    }
+    .product-info{
+      
+    }
+}
+

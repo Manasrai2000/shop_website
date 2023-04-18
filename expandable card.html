@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+          background-color: lightblue;
+          color: white;
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          cursor: pointer;
+          transition: height 0.5s ease-out;
+        }
+        
+        .expanded {
+          height: 200px;
+          transition: height 0.5s ease-in;
+        }
+        
+        .content {
+          display: none;
+          padding: 10px;
+          font-size: 16px;
+          text-align: justify;
+        }
+        </style>
+    
+</head>
+<body>
+        
+        
+        
+        <div class="card" onclick="expandCard(this)">
+          Click to expand
+          <div class="content" >
+            This is the content of card 1. It can contain any text or HTML.
+          </div>
+        </div>
+        
+        <div class="card" onclick="expandCard(this)">
+          Click to expand
+          <div class="content" >
+            This is the content of card 2. It can contain any text or HTML.
+          </div>
+        </div>
+        
+        <div class="card" onclick="expandCard(this)">
+          Click to expand
+          <div class="content" >
+            This is the content of card 3. It can contain any text or HTML.
+          </div>
+        </div>
+
+        
+        <script>
+        function expandCard(card) {
+          var content = card.querySelector('.content');
+        
+          if (card.classList.contains('expanded')) {
+            card.classList.remove('expanded');
+            content.style.display = 'none';
+          } else {
+            card.classList.add('expanded');
+            content.style.display = 'block';
+          }
+        }
+        </script>
+        
+        
+        
+</body>
+</html>
