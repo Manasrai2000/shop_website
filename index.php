@@ -12,61 +12,62 @@ include "conn.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evergreen</title>
   <link rel="stylesheet" href="./css/in.css">
+  <link rel="shortcut icon" href="./images/pancake.png" type="image/x-icon">
 
 
 </head>
 
 <body>
   <!-- navbar -->
-  <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg');">
-  <nav>
-    <div class="topmenu">
-      <a href="#">Home</a>
-      <a href="about.html">About</a>
-      <a href="#">Menu</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-  <!-- navbar -->
-  <!-- hero -->
+  <div class="hero-image"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/hero.jpg');">
+    <nav>
+      <div class="topmenu">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+    <!-- navbar -->
+    <!-- hero -->
     <div class="hero-text">
       <h1 style="font-size:50px">Evergreen</h1>
-      <p>kuch bhi discription</p>
+      <p>Discription</p>
       <a href="menu.html"><button>Menu</button></a>
     </div>
   </div>
   <!-- hero -->
   <!-- our products -->
   <section class="products">
-		<h2>Our Products</h2>
-		<div class="all-products">
-			
+    <h2>Our Products</h2>
+    <div class="all-products">
 
-			<?php
-    $query = "SELECT  *FROM products";
-    $result = $conn->query($query);
-    //$conn->close();
-    while ($row = mysqli_fetch_array($result)) {
-    ?>
-    
-      <div class="product">
-        <img src="./images/<?php echo $row['image']; ?>">
-				<div class="product-info">
-          <h4 class="product-title"><?php echo $row['name']; ?>
-        </h4>
-        <!-- <p class="product-price">$629*</p> -->
-        <a class="product-btn" href="<?php
-      $idvar = $row['items'];
-      echo "landing.php?" . $idvar ?>"><?php echo $row['prize']; ?></a>
-        
-      </div>
+
+      <?php
+      $query = "SELECT  *FROM products";
+      $result = $conn->query($query);
+      //$conn->close();
+      while ($row = mysqli_fetch_array($result)) {
+        ?>
+
+        <div class="product">
+          <img src="./images/<?php echo $row['image']; ?>">
+          <div class="product-info">
+            <h4 class="product-title">
+              <?php echo $row['name']; ?>
+            </h4>
+            <a class="product-btn" href="<?php $idvar = $row['items'];
+            echo "landing.php?items=" . $idvar ?>"><?php echo $row['prize']; ?></a>
+
+          </div>
+        </div>
+
+
+      <?php } ?>
+
     </div>
-  
-
-			<?php } ?>
-
-		</div>
-	</section>
+  </section>
   <!-- our products -->
   <!-- footer -->
   <div class="footer">
