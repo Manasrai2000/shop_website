@@ -48,16 +48,20 @@ include "conn.php";
     //$conn->close();
     while ($row = mysqli_fetch_array($result)) {
     ?>
-			<div class="product">
-				<img src="./images/<?php echo $row['image']; ?>">
+    
+      <div class="product">
+        <img src="./images/<?php echo $row['image']; ?>">
 				<div class="product-info">
-					<h4 class="product-title"><?php echo $row['name']; ?>
-						</h4>
-					<!-- <p class="product-price">$629*</p> -->
-					<a class="product-btn" href="#"><?php echo $row['prize']; ?></a>
-
-				</div>
-			</div>
+          <h4 class="product-title"><?php echo $row['name']; ?>
+        </h4>
+        <!-- <p class="product-price">$629*</p> -->
+        <a class="product-btn" href="<?php
+      $idvar = $row['items'];
+      echo "landing.php?" . $idvar ?>"><?php echo $row['prize']; ?></a>
+        
+      </div>
+    </div>
+  
 
 			<?php } ?>
 
