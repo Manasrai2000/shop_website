@@ -5,7 +5,7 @@ include 'phpqrcode/qrlib.php';
 
 
 // Generate QR code
-$text = 'Hello, World!';
+$text = 'Manas rai is trying to make this as a product so please apreciate that';
 $size = 10;
 $padding = 2;
 $errorCorrectionLevel = 'H';
