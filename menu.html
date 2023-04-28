@@ -6,16 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our menu</title>
     <link rel="stylesheet" href="./css/in.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <link rel="shortcut icon" href="./images/pancake.png" type="image/x-icon">
+
+<style>
+  .footer{
+    position: fixed;
+  }
+</style>
+
 </head>
-<body>
+<body bgcolor="#013220">
     <nav>
         <div class="topmenu">
           <a href="index.php">Home</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
-        
       </nav>
+
+
+
+
+<h1 style="color: #b8860b;text-align: center;">Menu</h1>
+<!-- Accordion -->
+<button class="accordion">Veg</button>
+<div class="panel">
+  <p>All veg products</p>
+</div>
+
+<button class="accordion">Non-Veg</button>
+<div class="panel">
+  <p>All Non-veg products</p>
+</div>
+
+<button class="accordion">Dessert</button>
+<div class="panel">
+  <p>Dessert are here</p>
+</div>
+<!-- Accordion -->
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+<div class="footer">
+  <p>Shop name.com</p>
+</div>
+<!-- footer -->
+
+<script>
+  // js for Accordion 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>

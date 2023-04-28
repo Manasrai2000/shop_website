@@ -1,0 +1,25 @@
+* {
+    margin: 0%;
+  }
+  .accordion {
+    background-color: #013220;
+    color: #b8860b;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 32px;
+    transition: 0.4s ease-out;
+  }
+  .panel {
+    padding: 0 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: none;
+    background-color: #013220;
+    color: #b8860b;
+    overflow: hidden;
+    transition:  0.4s ease-in;
+  }

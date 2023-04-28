@@ -41,7 +41,7 @@
       <p>Starters Section</p>
     </div>
     <div class="card column">
-      <p>breavegers</p>
+      <p>Beaverages</p>
     </div>
     <div class="card column">
       <p>full course meal</p>

@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .card {
-          background-color: lightblue;
-          color: white;
-          width: 200px;
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          cursor: pointer;
-          transition: height 0.5s ease-out;
-        }
-        
-        .expanded {
-          height: 200px;
-          transition: height 0.5s ease-in;
-        }
-        
-        .content {
-          display: none;
-          padding: 10px;
-          font-size: 16px;
-          text-align: justify;
-        }
-        </style>
-    
-</head>
-<body>
-        
-        
-        
-        <div class="card" onclick="expandCard(this)">
-          Click to expand
-          <div class="content" >
-            This is the content of card 1. It can contain any text or HTML.
-          </div>
-        </div>
-        
-        <div class="card" onclick="expandCard(this)">
-          Click to expand
-          <div class="content" >
-            This is the content of card 2. It can contain any text or HTML.
-          </div>
-        </div>
-        
-        <div class="card" onclick="expandCard(this)">
-          Click to expand
-          <div class="content" >
-            This is the content of card 3. It can contain any text or HTML.
-          </div>
-        </div>
 
-        
-        <script>
-        function expandCard(card) {
-          var content = card.querySelector('.content');
-        
-          if (card.classList.contains('expanded')) {
-            card.classList.remove('expanded');
-            content.style.display = 'none';
-          } else {
-            card.classList.add('expanded');
-            content.style.display = 'block';
-          }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0%;
+    }
+    .accordion {
+      background-color: #013220;
+      color: #b8860b;
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 22px;
+      transition: 0.4s ease-out;
+    }
+    .panel {
+      padding: 0 18px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      display: none;
+      background-color: #013220;
+      color: #b8860b;
+      overflow: hidden;
+      transition:  0.4s ease-in;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Accordion -->
+  <button class="accordion">Veg</button>
+  <div class="panel">
+    <p>All veg products</p>
+  </div>
+
+  <button class="accordion">Non-Veg</button>
+  <div class="panel">
+    <p>All Non-veg products</p>
+  </div>
+
+  <button class="accordion">Dessert</button>
+  <div class="panel">
+    <p>Dessert are here</p>
+  </div>
+<!-- Accordion -->
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
         }
-        </script>
-        
-        
-        
+      });
+    }
+  </script>
+
+
+
 </body>
+
 </html>
