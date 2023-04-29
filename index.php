@@ -39,28 +39,28 @@
   <div class="rowex">
         <div class="colex">
             <a href="#">
-                <div class="card" style="background-image: url('./images/13.jpg');">
+                <div class="card" style="background-image: url('./images/1.png');">
                     <p>Starters Section</p>
                 </div>
             </a>
         </div>
         <div class="colex">
             <a href="#">
-                <div class="card" style="background-image: url('./images/13.jpg');">
+                <div class="card" style="background-image: url('./images/2.png');">
                     <p>Beaverages</p>
                 </div>
             </a>
         </div>
         <div class="colex">
             <a href="#">
-                <div class="card" style="background-image: url('./images/13.jpg');">
+                <div class="card" style="background-image: url('./images/3.png');">
                     <p>Full course meal</p>
                 </div>
             </a>
         </div>
         <div class="colex">
             <a href="#">
-                <div class="card" style="background-image: url('./images/13.jpg');">
+                <div class="card" style="background-image: url('./images/4.png');">
                     <p>Desert</p>
                 </div>
             </a>
