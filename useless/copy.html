@@ -1,14 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/pancake.png" type="image/x-icon">
     <title>Product</title>
+    <style>
+        .rowex {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .colex {
+            width: 25%;
+        }
+
+        .colex .card {
+            margin: 3px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        .colex a {
+            text-decoration: none;
+            font-family: system-ui;
+            font-size: larger;
+            color: rgb(255, 255, 255);
+        }
+
+        @media screen and (max-width: 767px) {
+            .colex {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .colex {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="rowex">
+        <div class="colex">
+            <a href="#">
+                <div class="card" style="background-image: url('../images/13.jpg');">
+                    <p>Starters Section</p>
+                </div>
+            </a>
+        </div>
+        <div class="colex">
+            <a href="#">
+                <div class="card" style="background-image: url('../images/13.jpg');">
+                    <p>Beaverages</p>
+                </div>
+            </a>
+        </div>
+        <div class="colex">
+            <a href="#">
+                <div class="card" style="background-image: url('../images/13.jpg');">
+                    <p>Full course meal</p>
+                </div>
+            </a>
+        </div>
+        <div class="colex">
+            <a href="#">
+                <div class="card" style="background-image: url('../images/13.jpg');">
+                    <p>Desert</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>

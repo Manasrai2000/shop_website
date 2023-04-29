@@ -131,16 +131,38 @@ h2{
 	transform: scale(1.1);
 }
 /* card of explore more */
-/* beta */
-.card{
-    /* width: 18rem; */
-    /* height: 20rem; */
+.rowex {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    vertical-align: middle;
-    border-radius: 20px;
-    background-color: rgb(194, 194, 194);
+    flex-wrap: wrap;
 }
-/* beta */
+
+.colex {
+    width: 25%;
+}
+
+.colex .card {
+    margin: 4px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.colex a {
+    text-decoration: none;
+    font-family: system-ui;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 480px) {
+    
+}
 /* footer */
 
 .footer {
@@ -161,9 +183,11 @@ h2{
 
 @media screen and (max-width: 767px) {
   .footer {
-    position: static;
-    
+    position: static; 
   }
+  .colex {
+    width: 50%;
+    }
 }
 
 
@@ -210,6 +234,9 @@ h2{
         /* margin-top: 1rem; */
         font-size: 14px;
         transition: all 0.2s;
+    }
+    .colex {
+        width: 100%;
     }
     
 }
