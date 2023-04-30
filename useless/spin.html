@@ -8,15 +8,26 @@
         width: 100%;
         height: 200px;
     }
-img{
+.rotate{
 	width:100%;
     display: flex;
-	background:url(images/seascape.jpg) no-repeat 0 0;
+	background:url(images/back.png) no-repeat 0 0;
 	background-size:cover;
     justify-content: center;
+    position:absolute;
+    z-index:-999;
 	animation:spin 60s linear infinite;
 }
-
+.text{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(255, 9, 9, 0.219);
+}
 @keyframes spin{
 	from{transform:rotate(0deg)}
 	to{transform:rotate(360deg)}	
@@ -26,6 +37,6 @@ img{
 </head>
 
 <body>
-<div><img src="./images/back.png" alt=""></div>
-<div>hello</div>
+<div class="rotate"><img src="./images/back.png" alt=""></div>
+<div class="text"><h1>hello</h1></div>
 </body>

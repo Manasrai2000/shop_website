@@ -34,12 +34,35 @@
             justify-content: center;
             text-align: center;
             flex-wrap: wrap;
-            /* color: aliceblue; */
             margin: 1%;
             height: 290px;
             border-radius: 20px;
             background-color: rgba(255, 255, 255, 0.13);
             backdrop-filter: blur(5px);
+            transition: 0.5s;
+        }
+        .card:hover {
+            background-color: rgba(255, 251, 0, 0.185);
+        }
+        .rotate {
+            width: 100%;
+            display: flex;
+            background: url(images/back.png) no-repeat 0 0;
+            background-size: cover;
+            justify-content: center;
+            position: absolute;
+            z-index: -999;
+            animation: spin 60s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
         }
     </style>
 </head>
@@ -52,7 +75,8 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <h1>About us</h1>
+    <div><img class="rotate" src="./images/back.png" alt=""></div>
+    <h1 style="display: flex;flex-direction: row;justify-content: center;">About us</h1>
     <div class="card">
         <h1>THANK YOU</h1>
         <p> We make this website</p>
@@ -99,7 +123,7 @@
 
 
     <!-- footer -->
-    <div class="footer">
+    <div class="footer" style="position: fixed;">
         <p>Shop name.com</p>
     </div>
     <!-- footer -->
