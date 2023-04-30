@@ -15,7 +15,7 @@
 <body>
   <!-- navbar -->
   <div class="hero-image"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/hero.jpg');">
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/hero.png');">
     <nav>
       <div class="topmenu">
         <a href="about.html">About</a>
