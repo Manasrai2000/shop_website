@@ -1,15 +1,16 @@
 <?php
 @include 'config.php';
 session_start();
-if(!isset($_SESSION['user_name'])){
+if(!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
 if (isset($_POST['product'])) {
    $product = $_POST['product'];
    $image = $_POST['image'];
+   $id = $_POST['id'];
    $prize = $_POST['price'];
     echo $_POST['product'] . $_POST['image'] . $_POST['price'];
-    $query = "INSERT INTO `products`(`items`, `name`, `image`, `prize`) VALUES ('','$product', '$image', '$prize')";
+    $query = "INSERT INTO `products`(`items`, `name`, `image`, `prize`) VALUES ('$id','$product', '$image', '$prize')";
     if($conn->query($query)===true){
         echo "New record created successfully";
     }
@@ -31,6 +32,7 @@ if (isset($_POST['product'])) {
 
 <form action="#" method="post">
     <h2>Create Product</h2>
+    <input type="number" name="id" placeholder="id not mandetory">
     <input type="text" name="product" placeholder="Enter product name"><br>
     <input type="text" name="image" placeholder="Enter image name with type"><br>
     <input type="number" name="price" placeholder="Enter product price"><br>

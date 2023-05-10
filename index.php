@@ -18,6 +18,7 @@
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/hero.png');">
     <nav>
       <div class="topmenu">
+        <a href="#Our gallery">Gallery</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -68,7 +69,7 @@
     </div>
   <!-- Explore more -->
   <!-- Photo gallery -->
-  <h1 class="header">Our gallery</h1>
+  <h1 class="header" id="Our gallery">Our gallery</h1>
   <div class="row">
     <div class="column">
       <img src="./images/11.jpg" style="width:100%">
